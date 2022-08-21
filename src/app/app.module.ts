@@ -19,7 +19,6 @@ import { SocialPostsComponent } from './social-posts/social-posts.component';
     BrowserModule,
     HttpClientModule,
     FormsModule
-
   ],
   providers: [],
   bootstrap: [AppComponent]

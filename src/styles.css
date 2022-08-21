@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+    background-color: rgb(255,169,24);
+    background-image: url(https://wallpaperset.com/w/full/5/6/2/465356.jpg);
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}

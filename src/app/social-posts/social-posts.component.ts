@@ -25,6 +25,7 @@ export class SocialPostsComponent implements OnInit {
   ]
 
   AddToPosts(newPost:Post){
+    console.log(newPost)
     //unshift adds to start of array
     this.ListOfPosts.unshift(newPost);
   }

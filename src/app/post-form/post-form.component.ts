@@ -11,6 +11,8 @@ export class PostFormComponent implements OnInit {
 
   @Output() submitted = new EventEmitter<Post>();
 
+  displayme:boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -18,6 +20,7 @@ export class PostFormComponent implements OnInit {
 
 
   postForm(form:NgForm){
+
     let newPost:Post = {
       title: form.form.value.title,
       thought: form.form.value.thought
@@ -25,5 +28,10 @@ export class PostFormComponent implements OnInit {
 
     //line below tells Angular to send this value back
     this.submitted.emit(newPost);
+  }
+
+  ToggleDisplay(){
+    this.displayme = !this.displayme;
+
   }
 }

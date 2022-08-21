@@ -1,9 +1,9 @@
 <form #PostForm="ngForm" (ngSubmit)="postForm(PostForm)">
-    Title: <br><input type="text" id="title" name="title" ngForm><br>
-    Thought:<br><input type="text" name="thought" ngForm>
+    Title: <br><input type="text" id="title" name="title" ngModel><br>
+    Thought:<br><input type="text" name="thought" ngModel>
     <div class="gcheck">
         <br><label>Check box if you are Garfield</label>
-        <input type="checkbox" id="garfCheck"  ngForm required>
+        <input type="checkbox" id="garfCheck" name="garfCheck" ngModel (click)="ToggleDisplay()">
     </div>
-    <br><button>Add Post</button>
+    <br><button *ngIf="displayme">Add Post</button>
 </form>
