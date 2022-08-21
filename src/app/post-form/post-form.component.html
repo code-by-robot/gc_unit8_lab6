@@ -1,2 +1,9 @@
-Favorite Color: <input type="text" [(ngModel)]="title">
-Favorite Color: <input type="text" [(ngModel)]="thought">
+<form #PostForm="ngForm" (ngSubmit)="postForm(PostForm)">
+    Title: <br><input type="text" id="title" name="title" ngForm><br>
+    Thought:<br><input type="text" name="thought" ngForm>
+    <div class="gcheck">
+        <br><label>Check box if you are Garfield</label>
+        <input type="checkbox" id="garfCheck"  ngForm required>
+    </div>
+    <br><button>Add Post</button>
+</form>

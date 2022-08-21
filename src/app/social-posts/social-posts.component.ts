@@ -24,8 +24,9 @@ export class SocialPostsComponent implements OnInit {
     }
   ]
 
-  onSubmit(p:Post){
-    this.ListOfPosts.push(p);
+  AddToPosts(newPost:Post){
+    //unshift adds to start of array
+    this.ListOfPosts.unshift(newPost);
   }
 
 }

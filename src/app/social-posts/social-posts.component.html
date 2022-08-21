@@ -1,5 +1,7 @@
+<app-post-form (submitted)="AddToPosts($event)"></app-post-form>
+
 <div *ngFor="let post of ListOfPosts">
   <app-single-post [post]="post"></app-single-post>
 </div>
 
-<app-post-form></app-post-form>
+

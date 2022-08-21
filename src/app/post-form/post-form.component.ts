@@ -8,16 +8,22 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./post-form.component.css']
 })
 export class PostFormComponent implements OnInit {
-  public title = '';
-  public thought = '';
-  @Output() SelectPost = new EventEmitter<Post>();
+
+  @Output() submitted = new EventEmitter<Post>();
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  submitPost(p:Post):void{
-    this.SelectPost.emit(p)
+
+  postForm(form:NgForm){
+    let newPost:Post = {
+      title: form.form.value.title,
+      thought: form.form.value.thought
+    };
+
+    //line below tells Angular to send this value back
+    this.submitted.emit(newPost);
   }
 }
